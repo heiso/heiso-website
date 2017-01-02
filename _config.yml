@@ -1,9 +1,0 @@
-theme: jekyll-theme-cayman
-
-# Setup
-title:        "Alexandre Moatty"
-tagline:      "Fullstack developer"
-description:  "Hey !"
-
-# Build settings
-markdown: kramdown

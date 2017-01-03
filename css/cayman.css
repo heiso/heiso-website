@@ -33,10 +33,10 @@ a {
     border-color: rgba(255, 255, 255, 0.3); }
   .btn + .btn {
     margin-left: 1rem; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .btn {
       padding: 0.75rem 1rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .btn {
       padding: 0.6rem 0.9rem;
       font-size: 0.9rem; } }
@@ -53,12 +53,12 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  background: linear-gradient(200deg, rgba(68, 77, 53, 0.6), rgba(0, 0, 0, 0.7)), url("../assets/background.jpg") center center; }
-  @media screen and (min-width: 64em) {
+  background: linear-gradient(200deg, rgba(68, 77, 53, 0.6), rgba(0, 0, 0, 0.7)), url("../assets/background.jpg") center center;
+  background-color: #444d35; }
+  @media screen and (min-width: 54em) {
     .page-header {
       padding: 5rem 6rem 2rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .page-header {
       padding: 3rem 4rem 2rem; } }
   @media screen and (max-width: 42em) {
@@ -69,10 +69,10 @@ a {
   font-family: 'Raleway', sans-serif;
   margin-top: 0;
   margin-bottom: 1rem; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .project-name {
       font-size: 3.25rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .project-name {
       font-size: 2.25rem; } }
   @media screen and (max-width: 42em) {
@@ -83,10 +83,10 @@ a {
   margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .project-tagline {
       font-size: 1.25rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .project-tagline {
       font-size: 1.15rem; } }
   @media screen and (max-width: 42em) {
@@ -94,16 +94,17 @@ a {
       font-size: 1rem; } }
 
 .main-content {
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  text-align: justify; }
   .main-content :first-child {
     margin-top: 0; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .main-content {
-      max-width: 64rem;
+      max-width: 54rem;
       padding: 2rem 6rem;
       margin: 0 auto;
       font-size: 1.1rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .main-content {
       padding: 2rem 4rem;
       font-size: 1.1rem; } }
@@ -225,10 +226,10 @@ a {
   padding-top: 2rem;
   margin-top: 2rem;
   border-top: solid 1px #eff0f1; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .site-footer {
       font-size: 1rem; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .site-footer {
       font-size: 1rem; } }
   @media screen and (max-width: 42em) {
@@ -245,11 +246,11 @@ a {
 .avatar {
   position: relative;
   margin: 3rem auto; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 54em) {
     .avatar {
       height: 200px;
       width: 200px; } }
-  @media screen and (min-width: 42em) and (max-width: 64em) {
+  @media screen and (min-width: 42em) and (max-width: 54em) {
     .avatar {
       height: 150px;
       width: 150px; } }
@@ -258,25 +259,24 @@ a {
       height: 150px;
       width: 150px; } }
 
-.avatar img {
-  border: 4px solid rgba(255, 255, 255, 0.2);
+.avatar .img {
+  border: 4px solid rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   height: 100%;
   position: relative;
   width: 100%;
+  background: url("../assets/avatar.jpg") center center;
+  background-color: rgba(255, 255, 255, 0.3);
   z-index: 2; }
-
-@keyframes cycle-colors {
-  0% {
-    border-color: red; }
-  25% {
-    border-color: #80ff00; }
-  50% {
-    border-color: cyan; }
-  75% {
-    border-color: #8000ff; }
-  100% {
-    border-color: red; } }
+  @media screen and (min-width: 54em) {
+    .avatar .img {
+      background-size: auto 200px; } }
+  @media screen and (min-width: 42em) and (max-width: 54em) {
+    .avatar .img {
+      background-size: auto 150px; } }
+  @media screen and (max-width: 42em) {
+    .avatar .img {
+      background-size: auto 150px; } }
 
 @keyframes pulse {
   to {
@@ -305,7 +305,7 @@ a {
 
 .avatar:hover::before,
 .avatar:hover::after {
-  animation: pulse 1s linear infinite, cycle-colors 6s linear infinite; }
+  animation-duration: 1s; }
 
 .avatar:hover::after {
   animation-delay: .5s; }

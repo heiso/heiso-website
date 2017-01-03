@@ -1,5 +1,5 @@
 // Breakpoints
-$large-breakpoint: 64em;
+$large-breakpoint: 54em;
 $medium-breakpoint: 42em;
 
 // Headers
@@ -110,8 +110,8 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
-  background-color: $header-bg-color;
   background: linear-gradient(200deg, $header-bg-color-secondary, $header-bg-color), url('../assets/background.jpg') center center;
+  background-color: rgba(68, 77, 53, 1);
 
   @include large {
     padding: 5rem 6rem 2rem;
@@ -164,13 +164,14 @@ a {
 
 .main-content {
   word-wrap: break-word;
+  text-align: justify;
 
   :first-child {
     margin-top: 0;
   }
 
   @include large {
-    max-width: 64rem;
+    max-width: 54rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
@@ -386,21 +387,27 @@ a {
   }
 }
 
-.avatar img {
-  border: 4px solid rgba(255, 255, 255, 0.2);
+.avatar .img {
+  border: 4px solid rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   height: 100%;
   position: relative;
   width: 100%;
+  background: url('../assets/avatar.jpg') center center;
+  background-color: rgba(255, 255, 255, 0.3);
   z-index: 2;
-}
 
-@keyframes cycle-colors {
-  0% { border-color: hsl(0, 100%, 50%); }
-  25% { border-color: hsl(90, 100%, 50%); }
-  50% { border-color: hsl(180, 100%, 50%); }
-  75% { border-color: hsl(270, 100%, 50%); }
-  100% { border-color: hsl(360, 100%, 50%); }
+  @include large {
+    background-size: auto 200px;
+  }
+
+  @include medium {
+    background-size: auto 150px;
+  }
+
+  @include small {
+    background-size: auto 150px;
+  }
 }
 
 @keyframes pulse {
@@ -433,7 +440,7 @@ a {
 
 .avatar:hover::before,
 .avatar:hover::after {
-  animation: pulse 1s linear infinite, cycle-colors 6s linear infinite;
+  animation-duration: 1s;
 }
 
 .avatar:hover::after {

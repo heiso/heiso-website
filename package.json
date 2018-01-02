@@ -4,9 +4,12 @@
   "homepage": "http://github.com/heiso/heiso.github.io",
   "author": "Heiso",
   "scss": "./scss/cayman.scss",
+  "scripts": {
+    "start": "grunt"
+  },
   "devDependencies": {
     "autoprefixer": "^6.6.0",
-    "grunt": "~1.0.1",
+    "grunt": "^1.0.1",
     "grunt-browser-sync": "~2.1.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-postcss": "~0.8.0",
